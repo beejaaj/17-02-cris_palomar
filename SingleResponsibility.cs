@@ -8,15 +8,15 @@ namespace _17_02_cris_palomar
 {
     internal class SingleResponsibility
     {
-        class ClientService
+        public class ClientService
         {
-            public void CreateClient() { }
-            public void ReadClient() { }
-            public void UpdateClient() { }
-            public void DeleteClient() { }
+            public void CreateClient() { Console.WriteLine("Criando um novo cliente..."); }
+            public void ReadClient() { Console.WriteLine("Visualizando um cliente..."); }
+            public void UpdateClient() { Console.WriteLine("Atualizando o cliente"); }
+            public void DeleteClient() { Console.WriteLine("Deletando o cliente"); }
         }
 
-        class ClientNotifier
+        abstract class ClientNotifier
         {
             public void NotifyClient()
             {

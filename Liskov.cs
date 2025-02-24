@@ -14,6 +14,16 @@ namespace _17_02_cris_palomar
             void ColetarPagamento();
         }
 
+        public interface Recompensas
+        {
+            void Validacao();
+        }
+
+        public abstract class NubankRecompensas : Recompensas
+        {
+            public abstract void Validacao();
+        }
+
         public abstract class NubankCard : IInstrumentoPagamento
         {
             public void ColetarPagamento()
@@ -45,7 +55,7 @@ namespace _17_02_cris_palomar
             }
         }
 
-        public class NubankRewards : NubankCard
+        public class NubankRewards : NubankRecompensas
         {
             public override void Validacao()
             {
